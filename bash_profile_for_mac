@@ -1,0 +1,28 @@
+# .bash_profile
+
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/mysql/bin:$PATH
+export PATH=~/.gem/ruby/1.8/bin:$PATH
+export PATH=~/space/bin:$PATH
+export PATH=~/space/usr/bin:$PATH
+export CLICOLOR=1
+export LSCOLORS=exgxCxDxcxegedabagacad
+#export TERM_APP=terminal
+
+function pushd_silent {
+	pushd "$1" > /dev/null
+}
+
+function popd_silent {
+	popd "$1" > /dev/null
+}
+
+alias cd='pushd_silent'
+alias pd='popd_silent'
+alias sd='dirs -v'
+
+. ~/space/repository/git/contrib/completion/git-completion.bash
+. ~/space/repository/git-prompt/git-prompt.sh
+
+cd ~/space
