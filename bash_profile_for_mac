@@ -18,11 +18,19 @@ function popd_silent {
 	popd "$1" > /dev/null
 }
 
-alias cd='pushd_silent'
-alias pd='popd_silent'
+if [ -f /opt/local/etc/bash_completion ]; then
+	. /opt/local/etc/bash_completion
+fi
+
+#alias cd='pushd_silent'
+#alias pd='popd_silent'
 alias sd='dirs -v'
+alias crontab="VIM_CRONTAB=true crontab"
+alias redisstart='sudo launchctl start io.redis.redis-server'
+alias redisstop='sudo launchctl stop io.redis.redis-server'
 
-. ~/space/repository/git/contrib/completion/git-completion.bash
-. ~/space/repository/git-prompt/git-prompt.sh
+. ~/space/git/git/contrib/completion/git-completion.bash
+. ~/space/git/git-prompt/git-prompt.sh
+. ~/space/git/me2day/script/dev/bash_helper/instant_helper.sh
 
-cd ~/space
+cd space
