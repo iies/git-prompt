@@ -26,8 +26,8 @@ fi
 #alias pd='popd_silent'
 alias sd='dirs -v'
 alias crontab="VIM_CRONTAB=true crontab"
-alias redisstart='sudo launchctl start io.redis.redis-server'
-alias redisstop='sudo launchctl stop io.redis.redis-server'
+alias redis_start='sudo launchctl start io.redis.redis-server'
+alias redis_stop='sudo launchctl stop io.redis.redis-server'
 
 . ~/space/git/git/contrib/completion/git-completion.bash
 . ~/space/git/git-prompt/git-prompt.sh
